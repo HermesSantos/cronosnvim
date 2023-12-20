@@ -1,4 +1,4 @@
--- Lazy
+-- Lazy initial
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,12 +12,17 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Lazy setting up the colorscheme
+-- Lazy pluggins
 require("lazy").setup({
-	"craftzdog/solarized-osaka.nvim"
+	"craftzdog/solarized-osaka.nvim",
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+    "WhoIsSethDaniel/mason-tool-installer.nvim"
 })
 -- Setting up the colorscheme
 vim.cmd("colorscheme solarized-osaka")
 
 require("base")
 require("keymaps")
+require("p-mason")
