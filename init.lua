@@ -35,6 +35,7 @@ require("lazy").setup({
 		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+	"mg979/vim-visual-multi",
 })
 -- Setting up the colorscheme
 vim.cmd("colorscheme solarized-osaka")
