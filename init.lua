@@ -25,6 +25,11 @@ require("lazy").setup({
 	},
 	"nvim-tree/nvim-tree.lua",
 	"nvim-tree/nvim-web-devicons",
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {}, -- this is equalent to setup({}) function
+	},
 })
 -- Setting up the colorscheme
 vim.cmd("colorscheme solarized-osaka")
