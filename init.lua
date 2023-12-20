@@ -30,6 +30,11 @@ require("lazy").setup({
 		event = "InsertEnter",
 		opts = {}, -- this is equalent to setup({}) function
 	},
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.5",
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
 })
 -- Setting up the colorscheme
 vim.cmd("colorscheme solarized-osaka")
@@ -41,3 +46,4 @@ require("p-lsp")
 require("lsp-lua")
 require("p-conform")
 require("p-tree")
+require("p-telescope")
